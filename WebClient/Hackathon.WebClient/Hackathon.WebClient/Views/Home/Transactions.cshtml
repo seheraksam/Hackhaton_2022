@@ -1,0 +1,33 @@
+﻿@model Transaction
+@{
+    User user = ViewBag.User;
+    var recycleCoinBalance = ViewBag.Balance;
+}
+<div>
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">@user.Profile.FirstName @user.Profile.LastName</h5>
+            <p class="card-text">Your exact Carbon balance is: @user.Balance</p>
+            <p class="card-text">Your exact Recycle Coin balance is: @recycleCoinBalance</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Make a transaction</h5>
+            <p class="card-text">Give amount and recipient information.</p>
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-outline mb-4">
+                    @Html.TextBoxFor(x=>x.RecipientTCKN, new { @class = "form-control" })
+                    <label class="form-label" for="typeNumber">Recipient TCKN</label>
+                </div>
+                <div class="form-outline mb-4">
+                    @Html.TextBoxFor(x=>x.Amount, new { @class = "form-control" })
+                    <label class="form-label" for="typeNumber">Amount</label>
+                </div>
+                <button type="submit" class="btn btn-success">Send</button>
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<Session>
+@{
+    var sessionMaterials = Model
+            .SelectMany(x => x.SessionRecord)
+            .SelectMany(x => x.SessionMaterials)
+            .OrderByDescending(x => x.CreatedTime)
+            .ToList();
+}
+<div class="row">
+
+    @foreach (var sessionMaterial in sessionMaterials)
+    {
+        <div class="col-sm-3 mb-2">
+            <div class="card p-2  h-100">
+                <div class="row">
+                    <div class="col-sm-1 pl-4 d-flex flex-column justify-content-center">
+                        <img src="@sessionMaterial.Material.ImagePath" width="32" height="32" />
+                    </div>
+                    <div class="col-sm-11">
+                        <div class="card-body">
+                            <h5 class="card-title">@sessionMaterial.Material.Name</h5>
+                            <p class="card-text">@(sessionMaterial.Record.Session.User.Profile.FirstName) @sessionMaterial.Quantity adet @sessionMaterial.Material.Name ekledi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

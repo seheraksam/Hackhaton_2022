@@ -1,0 +1,74 @@
+{
+  "Test": "T",
+  "MaterialTypes": [
+    {
+      "name": "Metal",
+      "materials": [
+        {
+          "name": "Coke Can",
+          "value": 300,
+          "imagePath": "/assets/materials/coke.png"
+        },
+        {
+          "name": "Soda Can Lid",
+          "value": 40,
+          "imagePath": "/assets/materials/bottle-cap.png"
+        }
+      ],
+      "imagePath": "/assets/materialTypes/metal.png"
+    },
+    {
+      "name": "Plastic",
+      "materials": [
+        {
+          "name": "Bottle 0.5L",
+          "value": 50,
+          "imagePath": "/assets/materials/water-bottle.png"
+        },
+        {
+          "name": "Bottle 1.5L",
+          "value": 150,
+          "imagePath": "/assets/materials/water-bottle-big.png"
+        },
+        {
+          "name": "Plastic Bag",
+          "value": 25,
+          "imagePath": "/assets/materials/plastic-bag.png"
+        }
+      ],
+      "imagePath": "/assets/materialTypes/plastic.png"
+    },
+    {
+      "name": "Paper",
+      "materials": [
+        {
+          "name": "Paper",
+          "value": 25,
+          "imagePath": "/assets/materials/paper.png"
+        },
+        {
+          "name": "Newspaper",
+          "value": 100,
+          "imagePath": "/assets/materials/newspaper.png"
+        }
+      ],
+      "imagePath": "/assets/materialTypes/paper.png"
+    },
+    {
+      "name": "Glass",
+      "materials": [
+        {
+          "name": "Bottle",
+          "value": 350,
+          "imagePath": "/assets/materials/bottle.png"
+        },
+        {
+          "name": "Wine Bottle",
+          "value": 500,
+          "imagePath": "/assets/materials/wine-bottle.png"
+        }
+      ],
+      "imagePath": "/assets/materialTypes/glass.png"
+    }
+  ]
+}

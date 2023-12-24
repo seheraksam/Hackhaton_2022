@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package service;
+
+service grpcService {
+
+    rpc getRecycleCoin (Request) returns (Response) {}
+  }
+
+message Request {
+    int32 carbonValue = 1;
+  }
+  
+  message Response{
+    string recycleCoinValue = 1;
+  }
+  
+  

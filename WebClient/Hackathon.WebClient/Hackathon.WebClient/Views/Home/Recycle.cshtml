@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Recycle";
+}
+@model MaterialsViewModel
+
+<link rel="stylesheet" href="~/css/dropdown.css">
+<link rel="stylesheet" href="~/css/recycle.css">
+<h1 class="text-center">RECYCLE</h1>
+<br>
+<div class="d-flex justify-content-center">
+    <div id="materialTypeDropdown" class="dropdown me-4">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+            Material Types
+        </button>
+        <ul id="dropdown-content" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        </ul>
+    </div>
+    <button id="btn_add" class="btn btn-primary">+</button>
+</div>
+<div class="row">
+    <div class="card  col-6 offset-3">
+        <div class="card-header">
+            <b>CHOSEN</b>
+        </div>
+        <ul id="elections" class="list-group list-group-flush">
+        </ul>
+        <div class="card-footer"><button id="btn_done" class="btn btn-primary">Done</button></div>
+    </div>
+</div>
+
+
+
+
+<script type="module" src="~/js/recycle.js"></script>
